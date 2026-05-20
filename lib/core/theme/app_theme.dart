@@ -4,7 +4,6 @@ import 'package:flutter/services.dart';
 class AppTheme {
   AppTheme._();
 
-  // ── Palette ──────────────────────────────────────────────────────────────
   // Primary: Rich Indigo  |  Secondary: Teal  |  Tertiary: Amber
   static const Color _seed      = Color(0xFF5B6BF5); // vibrant indigo-blue
   static const Color _secondary = Color(0xFF0CA678); // emerald teal
@@ -21,12 +20,10 @@ class AppTheme {
   static const Color _darkSurface    = Color(0xFF1A1A2E);
   static const Color _darkCard       = Color(0xFF16213E);
 
-  // ── Shared button shape ──────────────────────────────────────────────────
   static final _buttonShape = RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(14),
   );
 
-  // ── Light Theme ──────────────────────────────────────────────────────────
   static ThemeData lightTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(
@@ -164,7 +161,6 @@ class AppTheme {
     ),
   );
 
-  // ── Dark Theme ───────────────────────────────────────────────────────────
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme.fromSeed(

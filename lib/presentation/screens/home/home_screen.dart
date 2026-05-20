@@ -17,7 +17,6 @@ class HomeScreen extends ConsumerWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          // ── SliverAppBar ──────────────────────────────────────────────
           SliverAppBar(
             expandedHeight: 160,
             floating: false,
@@ -64,7 +63,6 @@ class HomeScreen extends ConsumerWidget {
             ],
           ),
 
-          // ── Stats Bar ─────────────────────────────────────────────────
           tripsAsync.when(
             data: (trips) => SliverToBoxAdapter(
               child: Container(
@@ -106,7 +104,6 @@ class HomeScreen extends ConsumerWidget {
             error: (_, __) => const SliverToBoxAdapter(child: SizedBox()),
           ),
 
-          // ── Section Title ─────────────────────────────────────────────
           SliverPadding(
             padding: const EdgeInsets.symmetric(
                 horizontal: AppConstants.pagePadding),
@@ -121,7 +118,6 @@ class HomeScreen extends ConsumerWidget {
           ),
           const SliverToBoxAdapter(child: SizedBox(height: 12)),
 
-          // ── GridView of Trips ─────────────────────────────────────────
           tripsAsync.when(
             data: (trips) {
               if (trips.isEmpty) {

@@ -17,7 +17,6 @@ class SettingsScreen extends ConsumerWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          // ── AppBar ────────────────────────────────────────────────────
           SliverAppBar(
             pinned: true,
             expandedHeight: 180,
@@ -84,7 +83,6 @@ class SettingsScreen extends ConsumerWidget {
             sliver: SliverList(
               delegate: SliverChildListDelegate([
 
-                // ── Trip Statistics ───────────────────────────────────────
                 tripsAsync.when(
                   data: (trips) {
                     final shared = trips.where((t) => t.isShared).length;
@@ -130,7 +128,6 @@ class SettingsScreen extends ConsumerWidget {
                   error: (_, __) => const SizedBox(),
                 ),
 
-                // ── Appearance ───────────────────────────────────────────
                 _SectionHeader(title: 'Appearance'),
                 Card(
                   child: SwitchListTile(
@@ -151,7 +148,6 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // ── Profile ──────────────────────────────────────────────
                 _SectionHeader(title: 'Profile'),
                 prefsAsync.when(
                   data: (prefs) => Card(
@@ -194,7 +190,6 @@ class SettingsScreen extends ConsumerWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // ── About ────────────────────────────────────────────────
                 _SectionHeader(title: 'About'),
                 Card(
                   child: Column(
@@ -275,7 +270,6 @@ class SettingsScreen extends ConsumerWidget {
   }
 }
 
-// ── Stat Card ──────────────────────────────────────────────────────────────
 class _StatCard extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -323,7 +317,6 @@ class _StatCard extends StatelessWidget {
   }
 }
 
-// ── Section Header ─────────────────────────────────────────────────────────
 class _SectionHeader extends StatelessWidget {
   final String title;
   const _SectionHeader({required this.title});

@@ -25,7 +25,6 @@ class TripDetailScreen extends ConsumerWidget {
         return Scaffold(
           body: CustomScrollView(
             slivers: [
-              // ── SliverAppBar ──────────────────────────────────────────
               SliverAppBar(
                 expandedHeight: 200,
                 pinned: true,
@@ -78,7 +77,6 @@ class TripDetailScreen extends ConsumerWidget {
                 ],
               ),
 
-              // ── Trip Info ─────────────────────────────────────────────
               if (trip != null)
                 SliverToBoxAdapter(
                   child: Padding(
@@ -112,7 +110,6 @@ class TripDetailScreen extends ConsumerWidget {
                   ),
                 ),
 
-              // ── Events Section Title ──────────────────────────────────
               SliverPadding(
                 padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                 sliver: SliverToBoxAdapter(
@@ -135,7 +132,6 @@ class TripDetailScreen extends ConsumerWidget {
                 ),
               ),
 
-              // ── Events List ───────────────────────────────────────────
               eventsAsync.when(
                 data: (events) {
                   if (events.isEmpty) {

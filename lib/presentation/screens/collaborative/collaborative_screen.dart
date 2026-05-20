@@ -38,7 +38,6 @@ class CollaborativeScreen extends ConsumerWidget {
             ),
           ),
 
-          // ── Info banner ───────────────────────────────────────────────
           SliverToBoxAdapter(
             child: Container(
               margin: const EdgeInsets.all(AppConstants.pagePadding),
@@ -64,7 +63,6 @@ class CollaborativeScreen extends ConsumerWidget {
             ),
           ),
 
-          // ── Shared trips list ─────────────────────────────────────────
           sharedAsync.when(
             data: (trips) {
               if (trips.isEmpty) {

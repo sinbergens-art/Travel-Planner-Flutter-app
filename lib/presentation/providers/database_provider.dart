@@ -9,8 +9,6 @@ import '../../data/repositories/trip_repository_impl.dart';
 import '../../domain/repositories/location_repository.dart';
 import '../../domain/repositories/trip_repository.dart';
 
-// ─── Infrastructure ───────────────────────────────────────────────────────
-
 final appDatabaseProvider = Provider<AppDatabase>((ref) {
   final db = AppDatabase();
   ref.onDispose(db.close);
@@ -36,8 +34,6 @@ final preferencesServiceProvider =
     FutureProvider<PreferencesService>((ref) async {
   return PreferencesService.create();
 });
-
-// ─── Repositories ─────────────────────────────────────────────────────────
 
 final tripRepositoryProvider = Provider<TripRepository>((ref) {
   final db = ref.watch(appDatabaseProvider);

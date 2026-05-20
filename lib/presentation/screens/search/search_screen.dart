@@ -64,7 +64,6 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
             ),
           ),
 
-          // ── Results ───────────────────────────────────────────────────
           if (query.trim().length < 2)
             SliverFillRemaining(
               child: EmptyStateWidget(

@@ -2,9 +2,7 @@
 
 part of 'location_api_service.dart';
 
-// **************************************************************************
 // ChopperGenerator
-// **************************************************************************
 
 // coverage:ignore-file
 // ignore_for_file: type=lint
