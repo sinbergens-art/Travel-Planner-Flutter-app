@@ -1,5 +1,7 @@
 # ✈️ Travel Planner — Flutter Final Project
 
+Demo: https://drive.google.com/file/d/1BNX8N7pMmk2-SpuN3gfhFo_6VnO13qQp/view?usp=drive_link
+
 A full-featured **Travel & Event Planner** mobile application built with Flutter, demonstrating Clean Architecture, state management with Riverpod, local and cloud persistence, and external API integration.
 
 ---
@@ -229,6 +231,8 @@ service cloud.firestore {
 5. **Shared Tab** — Real-time Firestore trip appears instantly
 6. **Settings** — Toggle dark mode, edit user name
 7. **Architecture Q&A** — Clean Architecture layers walkthrough
+
+Demo: https://drive.google.com/file/d/1BNX8N7pMmk2-SpuN3gfhFo_6VnO13qQp/view?usp=drive_link
 
 ---
 
